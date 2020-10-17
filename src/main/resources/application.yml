@@ -1,0 +1,12 @@
+spring:
+  redis:
+    port: 26379
+    password: ${password}
+    sentinel:
+      master: ${masterName}
+      nodes:
+        - ${host}
+        - ${host}
+        - ${host}
+    lettuce:
+      shutdown-timeout: 200ms
